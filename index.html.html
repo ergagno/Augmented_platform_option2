@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augmented Enterprise Collaborative Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        header { background: #1a2b49; color: white; text-align: center; padding: 40px 20px; }
+        header h1 { font-size: 2.5em; margin-top: 20px; }
+        .logo-container { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
+        .logo { max-width: 150px; height: auto; }
+
+        /* Navigation Styles */
+        nav { background: #2c3e50; padding: 15px; text-align: center; }
+        .nav-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .button { 
+            position: relative; 
+            display: inline-block; 
+            background: #34495e; 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        .button:hover { background: #3498db; }
+        .submenu { 
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0; 
+            background: #34495e; 
+            min-width: 200px; /* Increased width for longer submenu items */
+            border-radius: 5px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+        }
+        .button:hover .submenu { display: block; }
+        .submenu a { 
+            display: block; 
+            color: white; 
+            padding: 10px; 
+            text-decoration: none; 
+        }
+        .submenu a:hover { background: #3498db; }
+
+        /* Login Window Styles */
+        .main { max-width: 1000px; margin: 0 auto; padding: 40px 20px; display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 300px); }
+        .login-container { 
+            background: #f4f4f4; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center; 
+        }
+        .login-container h2 { color: #1a2b49; font-size: 1.8em; margin-bottom: 20px; }
+        .login-container input { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            font-size: 1em; 
+        }
+        .login-container button { 
+            background: #34495e; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1em; 
+            cursor: pointer; 
+            width: 100%; 
+            margin-top: 10px; 
+        }
+        .login-container button:hover { background: #3498db; }
+        .login-container a { 
+            display: block; 
+            margin-top: 15px; 
+            color: #3498db; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+        }
+        .login-container a:hover { text-decoration: underline; }
+
+        footer { background: #1a2b49; color: white; text-align: center; padding: 20px; font-size: 0.9em; }
+        @media (max-width: 600px) { 
+            header h1 { font-size: 1.8em; }
+            .logo { max-width: 100px; }
+            .nav-buttons { flex-direction: column; align-items: center; }
+            .button { width: 80%; margin: 5px 0; }
+            .submenu { position: static; width: 100%; }
+            .login-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo1.png" alt="Logo 1" class="logo">
+            <img src="logo2.png" alt="Logo 2" class="logo">
+        </div>
+        <h1>Augmented Enterprise Collaborative Platform</h1>
+    </header>
+    <nav>
+        <div class="nav-buttons">
+            <div class="button">
+                Regulatory
+                <div class="submenu">
+                    <a href="#reg1">Application</a>
+                    <a href="#reg2">Hearings</a>
+                    <a href="#reg3">Toll Design</a>
+                    <a href="#reg4">Management System</a>
+                </div>
+            </div>
+            <div class="button">
+                Commercial Scenarios
+                <div class="submenu">
+                    <a href="#comm1">Market Analysis</a>
+                    <a href="#comm2">Foresighting</a>
+                    <a href="#comm3">Strategic Business Planning</a>
+                    <a href="#comm4">Governance</a>
+                </div>
+            </div>
+            <div class="button">
+                Capacity Planning
+                <div class="submenu">
+                    <a href="#cap1">Market Demand</a>
+                    <a href="#cap2">Contractual Opportunities</a>
+                    <a href="#cap3">Customer Impacts</a>
+                    <a href="#cap4">Commercial Risks</a>
+                </div>
+            </div>
+            <div class="button">
+                Portfolio
+                <div class="submenu">
+                    <a href="#port1">Safety</a>
+                    <a href="#port2">Compliance</a>
+                    <a href="#port3">Outages</a>
+                    <a href="#port4">Resources</a>
+                    <a href="#port5">Operational Risk</a>
+                    <a href="#port6">Pipeline and Facilities Integrity</a>
+                </div>
+            </div>
+            <div class="button">
+                Work Management
+                <div class="submenu">
+                    <a href="#work1">Work Schedule</a>
+                    <a href="#work2">Resource Management</a>
+                    <a href="#work3">Project Execution</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="login-container">
+            <h2>Log In</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+                <a href="#forgot">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Enabled Performance. All rights reserved.</p>
+    </footer>
+</body>
+</html>
